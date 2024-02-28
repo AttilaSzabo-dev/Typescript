@@ -1,5 +1,5 @@
 //import { useState } from "react";
-//import IventoryField from "./PlayFieldParts/InventoryField";
+import IventoryField from "./InventoryField";
 //import DialogueField from "./PlayFieldParts/DialogueField";
 //import BackpackField from "./PlayFieldParts/BackpackField";
 
@@ -142,7 +142,7 @@ const PlayField = () => {
 
   return (
     <div className="playField">
-      {/* <IventoryField charItems={charItems} /> */}
+      <IventoryField />
       {/* <DialogueField /> */}
       {/* <BackpackField
         sendFromBackpackHandler={sendFromBackpackHandler}
