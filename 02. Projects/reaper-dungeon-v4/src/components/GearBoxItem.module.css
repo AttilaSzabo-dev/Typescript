@@ -1,0 +1,11 @@
+.gearContainer {
+  padding: 3px;
+
+  .gearImageWrapper {
+    display: block;
+    width: 85px;
+    height: auto;
+    object-fit: contain;
+    margin: 0 auto;
+  }
+}

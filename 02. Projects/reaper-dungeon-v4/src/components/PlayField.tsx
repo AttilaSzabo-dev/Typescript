@@ -3,7 +3,7 @@ import IventoryField from "./InventoryField";
 //import DialogueField from "./PlayFieldParts/DialogueField";
 //import BackpackField from "./PlayFieldParts/BackpackField";
 
-import "./PlayField.css";
+import classes from "./PlayField.module.css";
 
 const PlayField = () => {
   // const [charItems, setCharItems] = useState([
@@ -141,7 +141,7 @@ const PlayField = () => {
   // };
 
   return (
-    <div className="playField">
+    <div className={classes.playField}>
       <IventoryField />
       {/* <DialogueField /> */}
       {/* <BackpackField
