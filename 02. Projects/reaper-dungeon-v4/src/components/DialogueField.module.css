@@ -1,0 +1,19 @@
+.field {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem 1rem;
+  border: 2px solid var(--field-border);
+  border-radius: var(--border-radius);
+  -webkit-box-shadow: 0px 0px 17px 5px var(--field-box-shadow);
+  -moz-box-shadow: 0px 0px 17px 5px var(--field-box-shadow);
+  box-shadow: 0px 0px 17px 5px var(--field-box-shadow);
+}
+
+.option-container {
+  height: 40%;
+  margin-top: auto;
+
+  :last-child {
+    margin-bottom: 0;
+  }
+}
