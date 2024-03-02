@@ -1,7 +1,7 @@
 //import { useState } from "react";
-import IventoryField from "./InventoryField";
-import DialogueField from "./DialogueField";
-import BackpackField from "./BackpackField";
+import IventoryField from "./inventory/InventoryField";
+import DialogueField from "./dialogue/DialogueField";
+import BackpackField from "./backpack/BackpackField";
 
 import classes from "./PlayField.module.css";
 

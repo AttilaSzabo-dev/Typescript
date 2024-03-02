@@ -2,7 +2,7 @@ import {
   offenseImages,
   defenseImages,
   magicImages,
-} from "../stores/skillImagesStore";
+} from "../../stores/skillImagesStore";
 import SkillBox from "./SkillBox";
 import GearBox from "./GearBox";
 //import CharacterBox from "./InventoryElements/CharacterBox";
