@@ -30,12 +30,4 @@
     background-image: url(../../../../images/backgrounds/corner_b_r.png);
     background-position: right;
   }
-
-  .buttonTab {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 50%;
-    border: 1px solid red;
-  }
 }

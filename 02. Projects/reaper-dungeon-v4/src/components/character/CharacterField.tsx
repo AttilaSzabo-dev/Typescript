@@ -7,9 +7,9 @@ import SkillBox from "./SkillBox";
 import GearBox from "./GearBox";
 //import CharacterBox from "./InventoryElements/CharacterBox";
 
-import classes from "./InventoryField.module.css";
+import classes from "./CharacterField.module.css";
 
-const IventoryField = () => {
+const CharacterField = () => {
   return (
     <div className={`${classes.field} ${classes["inventory-field"]}`}>
       <SkillBox images={offenseImages} />
@@ -21,4 +21,4 @@ const IventoryField = () => {
   );
 };
 
-export default IventoryField;
+export default CharacterField;

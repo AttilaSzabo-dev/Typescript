@@ -14,9 +14,6 @@ const GearBox = () => {
           <GearBoxItem key={item.id} image={item.imagePath} />
         )
       )} */}
-      <div className={classes.buttonTab}>
-        <button type="button">test</button>
-      </div>
     </div>
   );
 };
