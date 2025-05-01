@@ -2,11 +2,11 @@ import SkillBox from "./SkillBox";
 import GearBox from "./GearBox";
 //import CharacterBox from "./InventoryElements/CharacterBox";
 
-import classes from "./CharacterField.module.css";
+import c from "./CharacterField.module.css";
 
 const CharacterField = () => {
   return (
-    <div className={`${classes.field} ${classes["inventory-field"]}`}>
+    <div className={`${c.field} ${c["inventory-field"]}`}>
       <SkillBox type="offense" />
       <SkillBox type="defense" />
       <SkillBox type="magic" />

@@ -1,8 +1,8 @@
-import classes from "./OptionsBox.module.css";
+import c from "./OptionsBox.module.css";
 
 const OptionsBox = (props) => {
   return (
-    <div className={`${classes.box} ${classes["option-box--container"]}`}>
+    <div className={`${c.box} ${c["option-box--container"]}`}>
       {props.option}
     </div>
   );

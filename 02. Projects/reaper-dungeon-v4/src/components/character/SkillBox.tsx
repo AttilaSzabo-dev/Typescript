@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { skillImages } from "../../store/skillImagesStore";
-import classes from "./SkillBox.module.css";
+import c from "./SkillBox.module.css";
 
 interface Image {
   id: string;
@@ -32,25 +32,21 @@ const SkillBox = (props: SkillBoxProps) => {
   }, []);
 
   return (
-    <div className={classes.sections}>
+    <div className={c.sections}>
       {images &&
         images.map((item) => (
-          <div key={item.id} className={classes.box}>
-            <div className={classes.imageWrapper}>
-              <img
-                className={classes.skillPicture}
-                src={item.image}
-                alt={item.id}
-              />
+          <div key={item.id} className={c.box}>
+            <div className={c.imageWrapper}>
+              <img className={c.skillPicture} src={item.image} alt={item.id} />
             </div>
 
-            <div className={classes.buttonContainer}>
-              <button className={`${classes.button} ${classes.ready}`}>
-                <div className={classes.statHolder}></div>
+            <div className={c.buttonContainer}>
+              <button className={`${c.button} ${c.ready}`}>
+                <div className={c.statHolder}></div>
               </button>
             </div>
 
-            <div className={classes.statContainer}>
+            <div className={c.statContainer}>
               <span></span>
             </div>
           </div>

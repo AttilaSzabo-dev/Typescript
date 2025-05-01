@@ -1,7 +1,7 @@
 import StoryBox from "./StoryBox";
 import OptionsBox from "./OptionsBox";
 
-import classes from "./DialogueField.module.css";
+import c from "./DialogueField.module.css";
 
 const DialogueField = () => {
   const story = "story";
@@ -10,9 +10,9 @@ const DialogueField = () => {
   const option_3 = "option_3";
 
   return (
-    <div className={`${classes.field}`}>
+    <div className={`${c.field}`}>
       <StoryBox story={story} />
-      <div className={`${classes["option-container"]}`}>
+      <div className={`${c["option-container"]}`}>
         <OptionsBox option={option_1} />
         <OptionsBox option={option_2} />
         <OptionsBox option={option_3} />

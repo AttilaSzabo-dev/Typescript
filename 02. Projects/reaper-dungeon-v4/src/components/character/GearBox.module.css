@@ -3,31 +3,95 @@
   height: 49%;
   background-color: #000;
   opacity: 0.9;
-  background-image: url(../../../../images/backgrounds/body_bg.png);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: top;
 
-  display: grid;
-  grid-template-rows: repeat(4, 1fr);
-  grid-template-columns: repeat(3, 1fr);
+  .body-image-wrapper {
+    height: 100%;
+    width: 100%;
+    background-image: url(../../assets/images/backgrounds/body_bg.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
 
-  .imageCommon {
+  .image {
+    position: absolute;
+    width: 80px;
+    height: 80px;
     background-size: contain;
     background-repeat: no-repeat;
   }
+
   .corner_t_l {
-    background-image: url(../../../../images/backgrounds/corner_t_l.png);
+    top: 0;
+    left: 0;
+
+    background-image: url(../../assets/images/backgrounds/corner_t_l.png);
   }
   .corner_t_r {
-    background-image: url(../../../../images/backgrounds/corner_t_r.png);
+    top: 0;
+    right: 0;
+
+    background-image: url(../../assets/images/backgrounds/corner_t_r.png);
     background-position: right;
   }
   .corner_b_l {
-    background-image: url(../../../../images/backgrounds/corner_b_l.png);
+    bottom: 0;
+    left: 0;
+
+    background-image: url(../../assets/images/backgrounds/corner_b_l.png);
   }
   .corner_b_r {
-    background-image: url(../../../../images/backgrounds/corner_b_r.png);
+    bottom: 0;
+    right: 0;
+
+    background-image: url(../../assets/images/backgrounds/corner_b_r.png);
     background-position: right;
+  }
+
+  .gear {
+    position: absolute;
+    padding: 3px;
+
+    img {
+      display: block;
+      width: 85px;
+      height: auto;
+      object-fit: contain;
+    }
+
+    &.gear-head {
+      top: 0;
+      left: calc(50% - 44px);
+    }
+
+    &.gear-body {
+      top: 110px;
+      left: calc(50% - 44px);
+    }
+
+    &.gear-belt {
+      top: 230px;
+      left: calc(50% - 44px);
+    }
+
+    &.gear-leg {
+      bottom: 150px;
+      left: calc(50% - 44px);
+    }
+
+    &.gear-feet {
+      bottom: 0;
+      left: calc(50% - 44px);
+    }
+
+    &.gear-hand-left {
+      bottom: 50%;
+      left: calc(25% - 44px);
+    }
+
+    &.gear-hand-right {
+      bottom: 50%;
+      right: calc(25% - 44px);
+    }
   }
 }

@@ -1,10 +1,8 @@
-import classes from "./StoryBox.module.css";
+import c from "./StoryBox.module.css";
 
 const StoryBox = (props) => {
   return (
-    <div className={`${classes.box} ${classes["story-box--container"]}`}>
-      {props.story}
-    </div>
+    <div className={`${c.box} ${c["story-box--container"]}`}>{props.story}</div>
   );
 };
 

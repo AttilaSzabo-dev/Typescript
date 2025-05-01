@@ -1,10 +1,10 @@
 //import BackpackBox from "./BackpackElements/BackpackBox";
 
-import classes from "./BackpackField.module.css";
+import c from "./BackpackField.module.css";
 
 const BackpackField = () => {
   return (
-    <div className={`${classes.field} ${classes["backpack-field"]}`}>
+    <div className={`${c.field} ${c["backpack-field"]}`}>
       {/* <BackpackBox /> */}
     </div>
   );

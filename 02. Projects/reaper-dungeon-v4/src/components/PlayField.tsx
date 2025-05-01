@@ -3,11 +3,11 @@ import CharacterField from "./character/CharacterField";
 import DialogueField from "./dialogue/DialogueField";
 import BackpackField from "./backpack/BackpackField";
 
-import classes from "./PlayField.module.css";
+import c from "./PlayField.module.css";
 
 const PlayField = () => {
   return (
-    <div className={classes.playField}>
+    <div className={c.playField}>
       <CharacterField />
       <DialogueField />
       <BackpackField />

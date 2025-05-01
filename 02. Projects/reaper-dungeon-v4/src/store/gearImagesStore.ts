@@ -23,6 +23,7 @@ Object.entries(gearFolders).forEach(([path, image]) => {
     .replace("rare", "r")
     .replace("magic", "m")
     .replace("set", "s")
+    .replace("legendary", "l")
     .replace("belt", "be")
     .replace("body", "bo")
     .replace("bow", "bw")
