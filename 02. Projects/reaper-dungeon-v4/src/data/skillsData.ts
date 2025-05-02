@@ -17,7 +17,7 @@ export const allSkills: Skill[] = [
     manaCost: 10,
     damage: 25,
     effects: ["burn"],
-    isUnlocked: true,
+    isUnlocked: false,
   },
   {
     id: "of2",

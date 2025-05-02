@@ -30,6 +30,9 @@ const GearPanel = () => {
       <div className={`${c.gear} ${c["gear-hand-right"]}`}>
         <img src={gearImages.shield[0].image} alt="" />
       </div>
+      <div className={`${c.gear} ${c["gear-hand"]}`}>
+        <img src={gearImages.hand[0].image} alt="" />
+      </div>
     </div>
   );
 };

@@ -93,5 +93,10 @@
       bottom: 50%;
       right: calc(25% - 44px);
     }
+
+    &.gear-hand {
+      bottom: 30%;
+      left: calc(25% - 44px);
+    }
   }
 }

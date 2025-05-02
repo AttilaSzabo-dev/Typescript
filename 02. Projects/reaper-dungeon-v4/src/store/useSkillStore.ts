@@ -5,6 +5,10 @@ import { allSkills } from "../data/skillsData";
 interface SkillState {
   skills: Skill[];
   availableSkillPoints: number;
+  infoPanel: boolean;
+  hoveredSkillId: string | null;
+  setInfoPanel: (status: boolean) => void;
+  setHoveredSkillId: (id: string | null) => void;
   getSkillById: (id: string) => Skill | undefined;
   unlockSkill: (id: string) => void;
   levelUpSkill: (id: string) => void;
@@ -14,6 +18,18 @@ interface SkillState {
 export const useSkillStore = create<SkillState>((set, get) => ({
   skills: allSkills,
   availableSkillPoints: 10,
+  infoPanel: true,
+  hoveredSkillId: null,
+
+  setInfoPanel: (status) => {
+    set(() => ({
+      infoPanel: status,
+    }));
+  },
+
+  setHoveredSkillId: (id) => {
+    set({ hoveredSkillId: id });
+  },
 
   getSkillById: (id) => {
     return get().skills.find((skill) => skill.id === id);
