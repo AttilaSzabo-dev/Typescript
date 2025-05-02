@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useSkillStore } from "../../store/useSkillStore";
-import { Skill } from "../../interfaces/Skill";
+import { Skill } from "../../interfaces/skills/Skill";
 import c from "./SkillInfoPanel.module.css";
 
 interface SkillInfoPanelProps {
@@ -9,11 +9,11 @@ interface SkillInfoPanelProps {
 
 const SkillInfoPanel = (props: SkillInfoPanelProps) => {
   const { hoveredSkill } = props;
-  const { infoPanel } = useSkillStore();
-  const [isInfoPanelVisible, setIsInfoPanelVisible] = useState(infoPanel);
+  const { skillInfoPanel } = useSkillStore();
+  const [isInfoPanelVisible, setIsInfoPanelVisible] = useState(skillInfoPanel);
 
   useEffect(() => {
-    if (infoPanel) {
+    if (skillInfoPanel) {
       setIsInfoPanelVisible(true);
     } else {
       const timer = setTimeout(() => {
@@ -22,7 +22,8 @@ const SkillInfoPanel = (props: SkillInfoPanelProps) => {
 
       return () => clearTimeout(timer);
     }
-  }, [infoPanel]);
+  }, [skillInfoPanel]);
+
   return (
     <div
       className={`${c["skill-info-panel"]} ${

@@ -18,19 +18,19 @@ Object.entries(gearFolders).forEach(([path, image]) => {
   const name = normalizeId(path);
 
   const id = name
-    .replace("basic", "b")
-    .replace("advanced", "a")
+    .replace("common", "c")
     .replace("rare", "r")
+    .replace("epic", "e")
     .replace("magic", "m")
     .replace("set", "s")
     .replace("legendary", "l")
     .replace("belt", "be")
-    .replace("body", "bo")
+    .replace("armor", "ar")
     .replace("bow", "bw")
-    .replace("feet", "fe")
-    .replace("hand", "ha")
-    .replace("head", "he")
-    .replace("leg", "le")
+    .replace("boots", "bo")
+    .replace("glove", "gl")
+    .replace("helmet", "he")
+    .replace("pants", "pa")
     .replace("shield", "sh")
     .replace("sword", "sw");
 

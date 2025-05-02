@@ -51,6 +51,7 @@
   .gear {
     position: absolute;
     padding: 3px;
+    background-color: grey;
 
     img {
       display: block;
@@ -59,12 +60,12 @@
       object-fit: contain;
     }
 
-    &.gear-head {
+    &.gear-helmet {
       top: 0;
       left: calc(50% - 44px);
     }
 
-    &.gear-body {
+    &.gear-armor {
       top: 110px;
       left: calc(50% - 44px);
     }
@@ -74,12 +75,12 @@
       left: calc(50% - 44px);
     }
 
-    &.gear-leg {
+    &.gear-pants {
       bottom: 150px;
       left: calc(50% - 44px);
     }
 
-    &.gear-feet {
+    &.gear-boots {
       bottom: 0;
       left: calc(50% - 44px);
     }
@@ -94,7 +95,7 @@
       right: calc(25% - 44px);
     }
 
-    &.gear-hand {
+    &.gear-glove {
       bottom: 30%;
       left: calc(25% - 44px);
     }

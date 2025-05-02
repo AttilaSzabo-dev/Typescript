@@ -1,4 +1,5 @@
 import { Gear, GearType } from "../interfaces/gears/Gears";
+import { gearImages } from "../store/gearImagesStore";
 
 const gearTypes: GearType[] = [
   "helmet",
@@ -45,6 +46,28 @@ function getRandomValue(min: number, max: number): number {
   return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
+function generateImageId(type: GearType, rarity: string): string {
+  return rarity
+    .replace("common", "c")
+    .replace("rare", "r")
+    .replace("epic", "e")
+    .replace("magic", "m")
+    .replace("set", "s")
+    .replace("legendary", "l")
+    .concat(
+      type
+        .replace("belt", "be")
+        .replace("armor", "ar")
+        .replace("bow", "bw")
+        .replace("boots", "bo")
+        .replace("glove", "gl")
+        .replace("helmet", "he")
+        .replace("pants", "pa")
+        .replace("shield", "sh")
+        .replace("sword", "sw")
+    );
+}
+
 export function generateRandomGear(): Gear {
   const type = gearTypes[Math.floor(Math.random() * gearTypes.length)];
   const rarity = rarities[Math.floor(Math.random() * rarities.length)];
@@ -71,10 +94,15 @@ export function generateRandomGear(): Gear {
     stats[stat] = getRandomValue(1, 10);
   });
 
+  const imageId = generateImageId(type, rarity);
+  const imageEntry = gearImages[type]?.find((entry) => entry.id === imageId);
+  const image = imageEntry?.image ?? "";
+
   return {
     id: crypto.randomUUID(),
     name: `${rarity.charAt(0).toUpperCase() + rarity.slice(1)} ${type}`,
     type,
+    image,
     rarity: rarity as Gear["rarity"],
     stats,
   };

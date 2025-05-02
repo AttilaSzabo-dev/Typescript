@@ -6,7 +6,7 @@ export const defaultGears: Gear[] = [
     id: "defaultHelmet",
     name: "Common Helmet",
     type: "helmet",
-    image: gearImages.head.find((img) => img.id === "b_he_1")?.image || "",
+    image: gearImages.helmet.find((img) => img.id === "c_he_1")?.image || "",
     rarity: "common",
     stats: {
       armor: 1,
@@ -16,7 +16,7 @@ export const defaultGears: Gear[] = [
     id: "defaultArmor",
     name: "Common Armor",
     type: "armor",
-    image: gearImages.body.find((img) => img.id === "b_bo_1")?.image || "",
+    image: gearImages.armor.find((img) => img.id === "c_ar_1")?.image || "",
     rarity: "common",
     stats: {
       armor: 1,
@@ -26,7 +26,7 @@ export const defaultGears: Gear[] = [
     id: "defaultBelt",
     name: "Common Belt",
     type: "belt",
-    image: gearImages.belt.find((img) => img.id === "b_be_1")?.image || "",
+    image: gearImages.belt.find((img) => img.id === "c_be_1")?.image || "",
     rarity: "common",
     stats: {
       armor: 1,
@@ -36,7 +36,7 @@ export const defaultGears: Gear[] = [
     id: "defaultPants",
     name: "Common Pants",
     type: "pants",
-    image: gearImages.leg.find((img) => img.id === "b_le_1")?.image || "",
+    image: gearImages.pants.find((img) => img.id === "c_pa_1")?.image || "",
     rarity: "common",
     stats: {
       armor: 1,
@@ -46,7 +46,7 @@ export const defaultGears: Gear[] = [
     id: "defaultBoots",
     name: "Common Boots",
     type: "boots",
-    image: gearImages.feet.find((img) => img.id === "b_fe_1")?.image || "",
+    image: gearImages.boots.find((img) => img.id === "c_bo_1")?.image || "",
     rarity: "common",
     stats: {
       armor: 1,
@@ -56,7 +56,7 @@ export const defaultGears: Gear[] = [
     id: "defaultGlove",
     name: "Common Glove",
     type: "glove",
-    image: gearImages.hand.find((img) => img.id === "b_ha_1")?.image || "",
+    image: gearImages.glove.find((img) => img.id === "c_gl_1")?.image || "",
     rarity: "common",
     stats: {
       armor: 1,
@@ -66,7 +66,7 @@ export const defaultGears: Gear[] = [
     id: "defaultSword",
     name: "Common Sword",
     type: "sword",
-    image: gearImages.sword.find((img) => img.id === "b_sw_1")?.image || "",
+    image: gearImages.sword.find((img) => img.id === "c_sw_1")?.image || "",
     rarity: "common",
     stats: {
       minDamage: 1,
@@ -77,7 +77,7 @@ export const defaultGears: Gear[] = [
     id: "defaultShield",
     name: "Common Shield",
     type: "shield",
-    image: gearImages.shield.find((img) => img.id === "b_sh_1")?.image || "",
+    image: gearImages.shield.find((img) => img.id === "c_sh_1")?.image || "",
     rarity: "common",
     stats: {
       blockChance: 2,

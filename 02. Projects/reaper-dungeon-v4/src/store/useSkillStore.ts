@@ -5,7 +5,7 @@ import { defaultSkills } from "../data/defaultSkillsData";
 interface SkillState {
   skills: Skill[];
   availableSkillPoints: number;
-  infoPanel: boolean;
+  skillInfoPanel: boolean;
   hoveredSkillId: string | null;
   setInfoPanel: (status: boolean) => void;
   setHoveredSkillId: (id: string | null) => void;
@@ -18,12 +18,12 @@ interface SkillState {
 export const useSkillStore = create<SkillState>((set, get) => ({
   skills: defaultSkills,
   availableSkillPoints: 10,
-  infoPanel: false,
+  skillInfoPanel: false,
   hoveredSkillId: null,
 
   setInfoPanel: (status) => {
     set(() => ({
-      infoPanel: status,
+      skillInfoPanel: status,
     }));
   },
 
