@@ -1,6 +1,6 @@
 import { create } from "zustand";
 import { Skill } from "../interfaces/skills/Skill";
-import { allSkills } from "../data/skillsData";
+import { defaultSkills } from "../data/defaultSkillsData";
 
 interface SkillState {
   skills: Skill[];
@@ -16,7 +16,7 @@ interface SkillState {
 }
 
 export const useSkillStore = create<SkillState>((set, get) => ({
-  skills: allSkills,
+  skills: defaultSkills,
   availableSkillPoints: 10,
   infoPanel: false,
   hoveredSkillId: null,

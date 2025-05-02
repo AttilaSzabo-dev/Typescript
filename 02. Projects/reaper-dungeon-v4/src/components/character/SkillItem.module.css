@@ -2,6 +2,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  padding-bottom: 0.3rem;
 
   &.locked {
     opacity: 0.1;
@@ -10,7 +11,7 @@
 
   .image-wrapper {
     height: 80%;
-    padding: 0.5rem;
+    padding: 0.2rem 0.5rem 0 0.5rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -27,7 +28,7 @@
 
     .skill-picture {
       width: 60px;
-      height: 60px;
+      height: 65px;
     }
   }
 
