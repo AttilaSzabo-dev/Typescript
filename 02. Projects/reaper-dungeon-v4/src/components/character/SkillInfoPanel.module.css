@@ -1,0 +1,64 @@
+.skill-info-panel {
+  position: absolute;
+  top: -2px;
+  right: -300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 300px;
+  height: 600px;
+  border: 2px solid var(--field-border);
+  border-radius: var(--border-radius);
+  padding: 7px;
+  background-color: #000;
+  color: white;
+  z-index: -1;
+
+  transform: translateX(-100%);
+  transition: transform 0.2s ease-in-out;
+  pointer-events: none;
+  opacity: 0;
+
+  &.open {
+    transform: translateX(0%);
+    pointer-events: auto;
+    opacity: 1;
+  }
+
+  .top {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid var(--inventory-skill-border);
+
+    img {
+      width: 50px;
+      height: 50px;
+    }
+
+    span {
+      display: inline-block;
+      margin-top: 10px;
+    }
+  }
+  .bottom {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .attribute-wrapper {
+      display: flex;
+
+      span {
+        display: inline-block;
+        font-size: 16px;
+
+        &:first-of-type {
+          padding-right: 5px;
+        }
+      }
+    }
+  }
+}

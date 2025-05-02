@@ -5,11 +5,10 @@ import GearPanel from "../components/character/GearPanel";
 //import CharacterBox from "./InventoryElements/CharacterBox";
 
 import c from "./CharacterField.module.css";
+import SkillInfoPanel from "../components/character/SkillInfoPanel";
 
 const CharacterField = () => {
-  const { skills, availableSkillPoints, infoPanel, hoveredSkillId } =
-    useSkillStore();
-  const [isInfoPanelVisible, setIsInfoPanelVisible] = useState(infoPanel);
+  const { skills, availableSkillPoints, hoveredSkillId } = useSkillStore();
 
   const orderedTypes = ["offense", "defense", "magic"];
 
@@ -18,18 +17,6 @@ const CharacterField = () => {
   );
 
   const hoveredSkill = skills.find((s) => s.id === hoveredSkillId);
-
-  useEffect(() => {
-    if (infoPanel) {
-      setIsInfoPanelVisible(true);
-    } else {
-      const timer = setTimeout(() => {
-        setIsInfoPanelVisible(false);
-      }, 1000);
-
-      return () => clearTimeout(timer);
-    }
-  }, [infoPanel]);
 
   return (
     <div className={`${c.field} ${c["inventory-field"]}`}>
@@ -41,13 +28,7 @@ const CharacterField = () => {
         grouped.map((skills) => (
           <SkillPanel key={skills[0].type} skills={skills} />
         ))}
-      <div
-        className={`${c["skill-info-panel"]} ${
-          isInfoPanelVisible ? c["open"] : ""
-        }`}
-      >
-        {hoveredSkill && hoveredSkill.name}
-      </div>
+      {hoveredSkill && <SkillInfoPanel hoveredSkill={hoveredSkill} />}
       <GearPanel />
       {/* <CharacterBox /> */}
     </div>

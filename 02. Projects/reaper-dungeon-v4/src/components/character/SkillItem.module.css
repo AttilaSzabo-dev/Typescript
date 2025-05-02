@@ -1,4 +1,7 @@
 .skill-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   border-right: 1px solid var(--inventory-skill-border);
   border-left: 1px solid var(--inventory-skill-border);
   border-bottom: 1px solid var(--inventory-skill-border);
@@ -26,8 +29,8 @@
     }
 
     .skill-picture {
-      max-width: 55%;
-      height: auto;
+      width: 60px;
+      height: 60px;
     }
   }
 

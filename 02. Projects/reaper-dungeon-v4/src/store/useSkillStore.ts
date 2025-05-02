@@ -18,7 +18,7 @@ interface SkillState {
 export const useSkillStore = create<SkillState>((set, get) => ({
   skills: allSkills,
   availableSkillPoints: 10,
-  infoPanel: true,
+  infoPanel: false,
   hoveredSkillId: null,
 
   setInfoPanel: (status) => {

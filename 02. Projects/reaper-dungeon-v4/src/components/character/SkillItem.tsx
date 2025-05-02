@@ -27,13 +27,16 @@ const SkillItem = (props: SkillItemProps) => {
       <button
         className={c["image-wrapper"]}
         onClick={() => {
-          changeSkillPoints(-1), levelUpSkill(skill.id);
+          if (availableSkillPoints > 0) {
+            changeSkillPoints(-1);
+            levelUpSkill(skill.id);
+          }
         }}
         onMouseEnter={() => {
-          setInfoPanel(true), setHoveredSkillId(skill.id);
+          setInfoPanel(true);
+          setHoveredSkillId(skill.id);
         }}
         onMouseLeave={() => setInfoPanel(false)}
-        disabled={availableSkillPoints <= 0}
       >
         <img className={c["skill-picture"]} src={skill.image} alt={skill.id} />
       </button>
