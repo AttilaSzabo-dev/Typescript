@@ -1,5 +1,5 @@
 import { create } from "zustand";
-import { Skill } from "../interfaces/Skill";
+import { Skill } from "../interfaces/skills/Skill";
 import { allSkills } from "../data/skillsData";
 
 interface SkillState {

@@ -1,5 +1,5 @@
 import SkillItem from "./SkillItem";
-import { Skill } from "../../interfaces/Skill";
+import { Skill } from "../../interfaces/skills/Skill";
 
 import c from "./SkillPanel.module.css";
 

@@ -1,4 +1,4 @@
-import { Skill } from "../interfaces/Skill";
+import { Skill } from "../interfaces/skills/Skill";
 import {
   offenseImages,
   defenseImages,
