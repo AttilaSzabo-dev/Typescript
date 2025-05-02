@@ -1,4 +1,3 @@
-import { useEffect, useState } from "react";
 import { useSkillStore } from "../store/useSkillStore";
 import SkillPanel from "../components/character/SkillPanel";
 import GearPanel from "../components/character/GearPanel";

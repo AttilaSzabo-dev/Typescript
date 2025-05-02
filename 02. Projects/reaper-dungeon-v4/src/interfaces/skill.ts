@@ -1,13 +1,5 @@
-export interface Skill {
-  id: string;
-  name: string;
-  type: "offense" | "defense" | "magic" | string;
-  description: string;
-  image: string;
-  level: number;
-  cooldown: number;
-  manaCost: number;
-  damage: number;
-  effects?: string[];
-  isUnlocked?: boolean;
-}
+import { DefenseSkill } from "./DefenseSkill";
+import { MagicSkill } from "./MagicSkill";
+import { OffenseSkill } from "./OffenseSkill";
+
+export type Skill = OffenseSkill | DefenseSkill | MagicSkill;

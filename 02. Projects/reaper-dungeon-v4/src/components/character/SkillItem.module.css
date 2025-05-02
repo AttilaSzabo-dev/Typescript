@@ -2,9 +2,6 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  border-right: 1px solid var(--inventory-skill-border);
-  border-left: 1px solid var(--inventory-skill-border);
-  border-bottom: 1px solid var(--inventory-skill-border);
 
   &.locked {
     opacity: 0.1;
