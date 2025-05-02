@@ -1,7 +1,7 @@
 import { gearImages } from "../../store/gearImagesStore";
-import c from "./GearBox.module.css";
+import c from "./GearPanel.module.css";
 
-const GearBox = () => {
+const GearPanel = () => {
   return (
     <div className={c.section}>
       <div className={c["body-image-wrapper"]}></div>
@@ -34,4 +34,4 @@ const GearBox = () => {
   );
 };
 
-export default GearBox;
+export default GearPanel;

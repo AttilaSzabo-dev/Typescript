@@ -1,8 +1,7 @@
 //import { useState } from "react";
-import CharacterField from "./character/CharacterField";
-import DialogueField from "./dialogue/DialogueField";
-import BackpackField from "./backpack/BackpackField";
-
+import BackpackField from "./BackpackField";
+import CharacterField from "./CharacterField";
+import DialogueField from "./DialogueField";
 import c from "./PlayField.module.css";
 
 const PlayField = () => {

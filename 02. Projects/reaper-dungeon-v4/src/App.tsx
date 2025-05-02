@@ -1,5 +1,4 @@
-import PlayField from "./components/PlayField";
-
+import PlayField from "./fields/PlayField";
 import "./App.css";
 
 function App() {

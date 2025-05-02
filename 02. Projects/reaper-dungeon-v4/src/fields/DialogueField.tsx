@@ -1,6 +1,5 @@
-import StoryBox from "./StoryBox";
-import OptionsBox from "./OptionsBox";
-
+import OptionsBox from "../components/dialogue/OptionsBox";
+import StoryBox from "../components/dialogue/StoryBox";
 import c from "./DialogueField.module.css";
 
 const DialogueField = () => {
