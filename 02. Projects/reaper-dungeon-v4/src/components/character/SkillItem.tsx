@@ -1,4 +1,4 @@
-import { Skill } from "../../interfaces/Skill";
+import { Skill } from "../../interfaces/skills/Skill";
 import { useSkillStore } from "../../store/useSkillStore";
 import c from "./SkillItem.module.css";
 

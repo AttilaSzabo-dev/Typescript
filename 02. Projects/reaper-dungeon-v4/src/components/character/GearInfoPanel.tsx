@@ -1,19 +1,19 @@
 import { useEffect, useState } from "react";
-import { useSkillStore } from "../../store/useSkillStore";
-import { Skill } from "../../interfaces/skills/Skill";
-import c from "./SkillInfoPanel.module.css";
+import { useGearStore } from "../../store/useGearStore";
+import { Gear } from "../../interfaces/gears/Gears";
+import c from "./GearInfoPanel.module.css";
 
-interface SkillInfoPanelProps {
-  hoveredSkill: Skill;
+interface GearInfoPanelProps {
+  hoveredGear: Gear;
 }
 
-const SkillInfoPanel = (props: SkillInfoPanelProps) => {
-  const { hoveredSkill } = props;
-  const { skillInfoPanel } = useSkillStore();
-  const [isInfoPanelVisible, setIsInfoPanelVisible] = useState(skillInfoPanel);
+const GearInfoPanel = (props: GearInfoPanelProps) => {
+  const { hoveredGear } = props;
+  const { gearInfoPanel } = useGearStore();
+  const [isInfoPanelVisible, setIsInfoPanelVisible] = useState(gearInfoPanel);
 
   useEffect(() => {
-    if (skillInfoPanel) {
+    if (gearInfoPanel) {
       setIsInfoPanelVisible(true);
     } else {
       const timer = setTimeout(() => {
@@ -22,11 +22,11 @@ const SkillInfoPanel = (props: SkillInfoPanelProps) => {
 
       return () => clearTimeout(timer);
     }
-  }, [skillInfoPanel]);
+  }, [gearInfoPanel]);
 
   return (
     <div
-      className={`${c["skill-info-panel"]} ${
+      className={`${c["gear-info-panel"]} ${
         isInfoPanelVisible ? c["open"] : ""
       }`}
     >
@@ -35,10 +35,10 @@ const SkillInfoPanel = (props: SkillInfoPanelProps) => {
       <div className={`${c.image} ${c["corner_b_l"]}`}></div>
       <div className={`${c.image} ${c["corner_b_r"]}`}></div>
       <div className={c["top"]}>
-        <img src={hoveredSkill.image} alt={hoveredSkill.id} />
-        <span>{hoveredSkill.name}</span>
+        <img src={hoveredGear.image} alt={hoveredGear.id} />
+        <span>{hoveredGear.name}</span>
       </div>
-      <div className={c["bottom"]}>
+      {/* <div className={c["bottom"]}>
         <h3>Attributes:</h3>
         <div className={c["attribute-wrapper"]}>
           <span>Skill Level:</span>
@@ -98,9 +98,9 @@ const SkillInfoPanel = (props: SkillInfoPanelProps) => {
             </div>
           </>
         )}
-      </div>
+      </div> */}
     </div>
   );
 };
 
-export default SkillInfoPanel;
+export default GearInfoPanel;

@@ -7,6 +7,10 @@ type GearSlots = Partial<Record<GearType, Gear>>;
 interface CharacterState {
   equipped: GearSlots;
   backpack: Gear[];
+  gearInfoPanel: boolean;
+  hoveredGearId: string | null;
+  setGearPanel: (status: boolean) => void;
+  setHoveredGearId: (id: string | null) => void;
   equipGear: (gear: Gear) => void;
   unequipGear: (type: GearType) => void;
   moveToBackpack: (gear: Gear) => void;
@@ -14,7 +18,7 @@ interface CharacterState {
   swapWithBackpack: (gear: Gear) => void;
 }
 
-export const useCharacterStore = create<CharacterState>((set, get) => {
+export const useGearStore = create<CharacterState>((set, get) => {
   // Convert defaultGears array to equipped object
   const initialEquipped = defaultGears.reduce<GearSlots>((acc, gear) => {
     acc[gear.type] = gear;
@@ -24,6 +28,18 @@ export const useCharacterStore = create<CharacterState>((set, get) => {
   return {
     equipped: initialEquipped,
     backpack: [],
+    gearInfoPanel: false,
+    hoveredGearId: null,
+
+    setGearPanel: (status) => {
+      set(() => ({
+        gearInfoPanel: status,
+      }));
+    },
+
+    setHoveredGearId: (id) => {
+      set({ hoveredGearId: id });
+    },
 
     equipGear: (gear) => {
       const { equipped, backpack } = get();
